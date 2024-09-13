@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Murach Survey</title>
+</head>
+<body>
+    <header>
+        <img src="Murach_image-300x300.jpg" alt="Murach Logo" class="logo" width="150" height="150">
+    </header>
+    <main>
+        <div class="header">
+            <h1 class="root-color">Survey</h1>
+            <p class="description">If you have any questions or comments, please let us know.</p>
+        </div>
+        <form action="survey" method="post">
+            <fieldset class="information">
+                <legend>Your Information</legend>
+                <label for="name">First Name</label>
+                <input type="text" name="firstName" id="name" required>
+
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="text" name="dob" id="dob" placeholder="dd/mm/yy" required>
+            </fieldset>
+
+            <fieldset class="how-heard">
+                <legend>How did you hear about us?</legend>
+                <label><input type="radio" name="howHeard" value="Search Engine" required> Search Engine</label>
+                <label><input type="radio" name="howHeard" value="Friend" required> Word of Mouth</label>
+                <label><input type="radio" name="howHeard" value="Social Media" required> Social Media</label>
+                <label><input type="radio" name="howHeard" value="Other" required> Other</label>
+            </fieldset>
+
+            <fieldset class="receive-announcements">
+                <legend>Would you like to receive announcements about new books and specials?</legend>
+                <label><input type="radio" name="contact" value="Yes" required> Yes, I’d like that</label>
+                <label><input type="radio" name="contact" value="No" required> No, thank you</label>
+
+                <label for="contact-method">Please contact me by</label>
+                <select name="contact-method" id="contact-method" class="contact-by">
+                    <option value="email-postal">Email or Postal Mail</option>
+                    <option value="email">Email Only</option>
+                    <option value="postal">Postal Mail Only</option>
+                </select>
+            </fieldset>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            flatpickr("#dob", {
+                dateFormat: "d/m/y",
+                altInput: true,
+                altFormat: "d/m/y",
+                locale: "en"
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* General Styles */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 16px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    color: rgb(0, 131, 87);
+}
+
+p.description {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 20px 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Fieldset Styling */
+fieldset {
+    border: none;
+    margin-top: 10px;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(0, 131, 87);
+    margin-bottom: 15px;
+}
+
+/* Information Section */
+.information label, .information input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.information input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+}
+
+/* Radio Button Groups */
+.how-heard label, .receive-announcements label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Dropdown Styling */
+.receive-announcements label[for="contact-method"] {
+    margin-bottom: 0;
+    margin-top: 15px;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.contact-by {
+    width: 50%;
+    display: inline-block;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: rgb(0, 131, 87);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 14px;
+    width: 150px;
+    height: 50px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(0, 110, 73);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    .information label, .information input {
+        width: 100%;
+    }
+}
